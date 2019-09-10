@@ -15,6 +15,10 @@ LOGGING = {
     },
 
     'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'default',
+        },
         'file': {
             'class': 'logging.FileHandler',
             'formatter': 'default',
@@ -22,16 +26,16 @@ LOGGING = {
         },
     },
     'loggers': {
-        'CurrencyEye': {
-            'handlers': ['file', ],
+        'GoldenEye': {
+            'handlers': ['file', 'console'],
             'level': logging.DEBUG
         },
         'Api': {
-            'handlers': ['file',],
+            'handlers': ['file', 'console'],
             'level': logging.DEBUG
         },
         'Tasks': {
-            'handlers': ['file',],
+            'handlers': ['file', 'console'],
             'level': logging.DEBUG
         },
     },

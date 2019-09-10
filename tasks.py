@@ -12,7 +12,7 @@ dictConfig(config.LOGGING)
 log = logging.getLogger("Tasks")
 
 
-@sched.scheduled_job('interval', minutes=10)
+@sched.scheduled_job('interval', minutes=1)
 def update_rates():
     log.info("Job started")
     xrates = XRate.select()
