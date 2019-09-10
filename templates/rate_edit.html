@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rate edit</title>
+    </head>
+    <body>
+        <p>Rate: {{from_currency}} => {{to_currency}}</p>
+
+        <form action="{{url_for('edit_xrate', from_currency=from_currency, to_currency=to_currency)}}"
+              method="POST">
+
+          <input type="text" name="new_rate">
+
+          <input type="submit" value="Save">
+
+        </form>
+    </body>
+</html>
+
+
+
+
+

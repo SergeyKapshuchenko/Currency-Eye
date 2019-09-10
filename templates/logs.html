@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Api Logs</title>
+</head>
+<body>
+    {% if not logs %}
+    <h1>No logs!</h1>
+    {% endif %}
+    
+    <ul>
+        {% for l in logs %}
+        <li>{{l.json()}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rates</title>
+</head>
+<body>
+    {% if not xrates %}
+    <h1>No rates!</h1>
+    {% endif %}
+    
+    <table border="1">
+        <thead align="center">
+            <td>From</td>
+            <td>To</td>
+            <td>Rate</td>
+            <td>Updated</td>
+            <td>
+                <a href="{{url_for('update_xrates')}}">Update All</a>
+            </td>
+        </thead>
+
+        {% for rate in xrates %}
+        <tr align="center">
+            <td>{{rate.from_currency}}</td>
+            <td>{{rate.to_currency}}</td>
+            <td>{{rate.rate}}</td>
+            <td>{{rate.updated}}</td>
+            <td>
+                <a href="{{url_for('update_xrates', from_currency=rate.from_currency, to_currency=rate.to_currency)}}">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>
+
+
+
+
+
