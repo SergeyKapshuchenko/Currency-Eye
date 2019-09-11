@@ -19,6 +19,7 @@ def update_rates():
     for rate in xrates:
         try:
             api.update_rate(rate.from_currency, rate.to_currency)
+            log.info("api updated")
         except Exception as e:
             log.exception(e)
     log.info("Job finished")
