@@ -3,13 +3,16 @@
 <html>
 <head>
     <title>Rates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.7.2/cosmo/bulmaswatch.min.css" />
 </head>
 <body>
     {% if not xrates %}
     <h1>No rates!</h1>
     {% endif %}
     
-    <table border="1">
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead align="center">
             <td>From</td>
             <td>To</td>
