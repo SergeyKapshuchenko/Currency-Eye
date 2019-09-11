@@ -8,9 +8,17 @@ import controllers
 def check_ip(func):
     @wraps(func)
     def checker(*args, **kwargs):
-        if request.remote_addr not in IP_LIST:
+
+        if request.access_route:
+            client_ip = request.access_route[0]
+        else:
+            client_ip = request.remote_addr
+
+        if client_ip not in IP_LIST:
             return abort(403)
+
         return func(*args, **kwargs)
+
     return checker
 
 

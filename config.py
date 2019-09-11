@@ -4,7 +4,7 @@ DB_NAME = "CurrencyEye.db"
 
 HTTP_TIMEOUT = 15
 
-IP_LIST = ["127.0.0.1", "127.0.0.10"]
+IP_LIST = ["127.0.0.1", "127.0.0.10", "217.66.105.49"]
 
 LOGGING = {
     'version': 1,
