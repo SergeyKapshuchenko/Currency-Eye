@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Currency Eye{% endblock %}
+
+{% block body %}
+        <section class="section">
+                <h1 class="title">
+                    Flask project - Currency Eye
+                </h1>
+                <h2 class="subtitle">
+                    Easy way to check official exchange rates of USD,UAH,RUB,BTC.
+                </h2>
+                <p>You can use my API, links below:
+                    <br/>
+                    <br/>
+                        <span class="tag is-medium">
+                            <a href="{{url_for('api_rates', fmt='json')}}">GET JSON format</a>
+                        </span>
+                    <br/>
+                    <br/>
+                        <span class="tag is-medium">
+                            <a href="{{url_for('api_rates', fmt='xml')}}">GET XML format</a>
+                        </span>
+                </p>
+        </section>
+{% endblock %}

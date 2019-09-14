@@ -1,6 +1,6 @@
 from app import app
 from functools import wraps
-from flask import request, abort
+from flask import request, abort, render_template
 from config import IP_LIST
 import controllers
 
@@ -24,7 +24,7 @@ def check_ip(func):
 
 @app.route("/")
 def hello():
-    return "Hello everyone"
+    return render_template("home.html")
 
 
 @app.route("/xrates")

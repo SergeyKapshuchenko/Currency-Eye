@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Rate edit</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.7.2/cosmo/bulmaswatch.min.css" />
-    </head>
-    <body>
-        <p>Rate: {{from_currency}} => {{to_currency}}</p>
+{% extends "base.html" %}
 
-        <form action="{{url_for('edit_xrate', from_currency=from_currency, to_currency=to_currency)}}"
-              method="POST">
+{% block title %}Rate edit{% endblock %}
 
-          <input type="text" name="new_rate">
-
-          <input type="submit" value="Save">
-
-        </form>
-    </body>
-</html>
-
-
-
-
-
+{% block body %}
+    <section class="section">
+        <div class="container is-widescreen">
+            <p>Rate: {{from_currency}} => {{to_currency}}</p>
+            <form action="{{url_for('edit_xrate', from_currency=from_currency, to_currency=to_currency)}}"
+                  method="POST">
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-normal" type="text" name="new_rate" placeholder="rate" autofocus="">
+                        <input class="button" type="submit" value="Save">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
