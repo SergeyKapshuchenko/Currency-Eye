@@ -1,5 +1,5 @@
 # Currency-Eye
-## Currency eye project
+##### Currency eye project
 ### About
 I'm using Privat24\CBR\Cryptonator api to gather all information about currency exchange rates of USD, UAH, RUR, BTC.\
 I create my own api. You can get JSON\XML with all rates.\
