@@ -1,7 +1,7 @@
 import traceback
 import importlib
 
-import requests
+from requests_html import HTMLSession
 
 from config import logging, LOGGING, HTTP_TIMEOUT
 
@@ -53,4 +53,5 @@ class _Api:
             log.save()
 
     def _send(self, url, method, data=None, headers=None):
-        return requests.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)
+        with HTMLSession() as session:
+            return session.request(method=method, url=url, headers=headers, data=data, timeout=HTTP_TIMEOUT)

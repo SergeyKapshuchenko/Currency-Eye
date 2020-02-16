@@ -25,6 +25,8 @@ class Api(_Api):
         url_end = f"{cryptonator_aliases_map[from_currency]}-{cryptonator_aliases_map[to_currency]}"
         url = f"https://api.cryptonator.com/api/ticker/{url_end}"
         response = self._send_request(url=url, method="get")
+        print(url)
+        print(response.text)
         response_json = response.json()
         self.log.debug("Cryptonator response: %s" % response_json)
         rate = self._find_rate(response_json)
