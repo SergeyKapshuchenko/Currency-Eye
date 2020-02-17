@@ -1,4 +1,4 @@
-#!/Users/sergeykapshuchenko/Desktop/CurrencyEye/venv/bin/python
+#!/Users/sergeykapshuchenko/Desktop/Python/CurrencyEye/venv/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==19.0.3','console_scripts','pip'
 __requires__ = 'pip==19.0.3'
 import re

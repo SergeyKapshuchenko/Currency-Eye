@@ -1,4 +1,4 @@
-#!/Users/sergeykapshuchenko/Desktop/CurrencyEye/venv/bin/python
+#!/Users/sergeykapshuchenko/Desktop/Python/CurrencyEye/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
